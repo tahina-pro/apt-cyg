@@ -455,7 +455,7 @@ function apt-install {
   echo Unpacking...
 
   cd "$cache/$mirrordir/$dn"
-  tar -x -C / -f $bn
+  tar -x -C / -f $bn --hard-dereference
   # update the package database
 
   awk '
